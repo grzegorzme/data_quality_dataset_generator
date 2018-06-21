@@ -2,13 +2,18 @@ import numpy as np
 import datetime
 import json
 import random
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 
 app = Flask(__name__)
 
 
 @app.route('/')
+def main():
+    return render_template('main.html')
+
+
+@app.route('/data')
 def generate_dataset(n=100):
     # id
     id_ = list(range(n))
@@ -47,7 +52,7 @@ def generate_dataset(n=100):
         'id': a,
         'date': b,
         'view_count': c,
-        'view_count_by_category_json': d
+        'view_count_by_category': d
     } for a, b, c, d in zip(id_, date_, view_count_, view_count_split_)])
 
 
