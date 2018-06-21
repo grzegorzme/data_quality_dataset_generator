@@ -2,28 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dataset description</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title>Recruitment task</title>
 </head>
 <body>
-<h2>Use <a href="/data">dq-dataset.herokuapp.com/data</a> to retrieve an example dataset.</h2>
-<h2>Your goal is to prepare a process/visualisation catching data quality issues in the above dataset.</h2>
 
-<p>The data table contains the following information:
+<div class="container" style="padding-top: 20px;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Recruitment task</h2>
+        </div>
+        <div class="panel-body">
+            <div class="col-md-9">
+                <div class="alert alert-info" role="alert">
+                    <p><strong>Go to <a href="/data">dq-dataset.herokuapp.com/data</a> to retrieve an example dataset.
+                    </strong>
+                    <p>Your goal is to prepare a process/visualisation catching data quality issues in the above
+                        dataset.
+                </div>
+                <p>The data table contains the following information:
 
-<ul>
-    <li><b>id</b>: integer unique for each row, must not be empty.<br>
-        Example values: 0, 1, 2</li>
-    <li><b>date</b>: date in ISO format (YYYY-MM-DD).<br>
-        Example values: 2018-06-01</li>
-    <li><b>view_count</b>: integer number describing the number of occurrences of an arbitrary event.<br>
-        Example values: 1, 10, 123</li>
-    <li><b>view_count_by_category</b>: <b>view_count</b> split by categories saved as a string representation of a JSON object.<br>
-        Example values: {"category_0": 5, "category_1": 13}</li>
-</ul>
-<h3>
-The goal is to develop and automate test cases to find
-data quality issues - row which values do not comply with the assumptions.</h3>
+                <ul style="list-style-type: none; padding-bottom: 20px;">
+                    <li><strong><samp>id</samp></strong>: integer unique for each row, must not be empty.<br>
+                        Example values: <samp>0, 1, 2</samp></li>
+                    <li><strong><samp>date</samp></strong>: date in ISO format (<samp>YYYY-MM-DD).</samp><br>
+                        Example values: <samp>2018-06-01</samp></li>
+                    <li><strong><samp>view_count</samp></strong>: integer number describing the number of occurrences of
+                        an arbitrary event.<br>
+                        Example values: <samp>1, 10, 123</samp></li>
+                    <li><strong><samp>view_count_by_category</samp></strong>: <samp>view_count</samp> split by
+                        categories saved as a string representation of a JSON object.<br>
+                        Example values: <samp>{"category_0": 5, "category_1": 13}</samp></li>
+                </ul>
 
 
+                <div class="alert alert-info" role="alert">
+                    <p><strong>The goal is to develop and automate test cases to discover
+                        data quality issues.</strong>
+                    <p> Find the rows which values do not comply with the assumptions.
+                    <p>
+                        Present the results in any way you like. Remember to attach any code you used to solve the
+                        problem.
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
 </body>
 </html>
